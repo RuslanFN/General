@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AppTeam101.Models.Events>
+@{
+    ViewBag.Title = "Достижения";
+}
+
+        @foreach (var item in Model)
+        {
+            <table class="table">
+                <tr>
+                    <td width="250">
+                        
+                        <img src="@Url.Content("https://cs6.pikabu.ru/post_img/2015/07/04/10/1436029898_1190099444.jpg")" width="250">
+                    </td>
+                    <td>
+
+                        <h1> @Html.DisplayFor(modelItem => item.eventname)</h1><br />
+
+
+                        @Html.DisplayFor(modelItem => item.locality)<br />
+                        <h1> @Html.DisplayFor(modelItem => item.place)</h1><br />
+
+
+                        @Html.DisplayFor(modelItem => item.achive_way)<br />
+
+                        <br />
+                    </td>
+                </tr>
+            </table>
+        }
+        
+    
